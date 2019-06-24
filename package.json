@@ -20,9 +20,10 @@
   "engines": {
     "node": ">= v0.6.0"
   },
-  "main": "lib/erede.js",
+  "main": "./lib/erede.js",
   "dependencies": {
-    "semver": "^5.0.3"
+    "semver": "^5.0.3",
+    "bl": "^3.0.0"
   },
   "config": {
     "blanket": {
