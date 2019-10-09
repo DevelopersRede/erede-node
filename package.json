@@ -1,9 +1,9 @@
 {
-  "author": "João Batista Neto",
+  "author": "Igor Pereira da Silva",
   "name": "erede-node",
   "description": "SDK Node.JS Rede",
-  "version": "1.0.0",
-  "homepage": "https://github.com/DevelopersRede/erede-node",
+  "version": "0.0.1",
+  "homepage": "https://github.com/igorpdasilvaa/erede-node",
   "keywords": [
     "rede",
     "erede",
@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/DevelopersRede/erede-node.git"
+    "url": "https://github.com/igorpdasilvaa/erede-node.git"
   },
   "bugs": {
-    "url": "https://github.com/DevelopersRede/erede-node/issues"
+    "url": "https://github.com/igorpdasilvaa/erede-node/issues"
   },
   "license": "MIT",
   "engines": {

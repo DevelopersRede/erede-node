@@ -1,3 +1,7 @@
+# Pacote com refactoring em progresso, não recomendado para ambiente de produção
+
+# Futuramente pretendo fazer pull request no repositório oficial do erede
+
 # SDK Node.js
 
 SDK de integração eRede
