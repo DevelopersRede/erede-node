@@ -47,9 +47,9 @@ module.exports = class Transaction {
 
   static fromJSON(json) {
     const transaction = new Transaction(json.amount, json.reference);
-    const keys = json.keys();
+    const keys = Object.keys(json);
 
-    for (let keyIndex = keys.length; keyIndex >= 0; keyIndex -= 1) {
+    for (let keyIndex = keys.length - 1; keyIndex >= 0; keyIndex -= 1) {
       const property = keys[keyIndex];
       const value = json[property];
       let i = 0;
