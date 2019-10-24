@@ -1,8 +1,8 @@
 {
-  "author": "Igor Pereira da Silva",
+  "author": "João Batista Neto",
   "name": "erede-node",
   "description": "SDK Node.JS Rede",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "test": "jest"
   },
