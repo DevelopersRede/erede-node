@@ -3,6 +3,9 @@
   "name": "erede-node",
   "description": "SDK Node.JS Rede",
   "version": "0.0.1",
+  "scripts": {
+    "test": "jest"
+  },
   "homepage": "https://github.com/igorpdasilvaa/erede-node",
   "keywords": [
     "rede",
