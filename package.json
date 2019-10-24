@@ -3,7 +3,10 @@
   "name": "erede-node",
   "description": "SDK Node.JS Rede",
   "version": "1.0.0",
-  "homepage": "https://github.com/DevelopersRede/erede-node",
+  "scripts": {
+    "test": "jest"
+  },
+  "homepage": "https://github.com/igorpdasilvaa/erede-node",
   "keywords": [
     "rede",
     "erede",
@@ -11,19 +14,25 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/DevelopersRede/erede-node.git"
+    "url": "https://github.com/igorpdasilvaa/erede-node.git"
   },
   "bugs": {
-    "url": "https://github.com/DevelopersRede/erede-node/issues"
+    "url": "https://github.com/igorpdasilvaa/erede-node/issues"
   },
   "license": "MIT",
   "engines": {
     "node": ">= v0.6.0"
   },
-  "main": "./lib/erede.js",
+  "main": "./src/erede.js",
   "dependencies": {
     "semver": "^5.0.3",
     "bl": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0"
   },
   "config": {
     "blanket": {
