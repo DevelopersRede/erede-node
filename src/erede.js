@@ -53,18 +53,17 @@ module.exports = class eRede {
     return service.execute();
   }
 
-  zero(transaction) {
-    const { amount } = transaction;
-    const { capture } = transaction;
+  zero(oldTransaction) {
+    let transactionToBezered = { ...oldTransaction };
 
-    transaction.amount = 0;
-    transaction.capture = true;
+    transactionToBezered.amount = 0;
+    transactionToBezered.capture = true;
 
-    transaction = this.create(transaction);
+    transactionToBezered = this.create(transactionToBezered);
 
-    transaction.amount = amount;
-    transaction.capture = capture;
+    transactionToBezered.amount = oldTransaction.amount;
+    transactionToBezered.capture = oldTransaction.capture;
 
-    return transaction;
+    return transactionToBezered;
   }
 };

@@ -1,28 +1,27 @@
-"use strict";
+
 
 module.exports = class ThreeDSecure {
-    constructor() {
-        this.embedded = true;
-        this.threeDIndicator = "1";
+  constructor() {
+    this.embedded = true;
+    this.threeDIndicator = '1';
+  }
+
+  static get CONTINUE_ON_FAILURE() {
+    return 'continue';
+  }
+
+  static get DECLINE_ON_FAILURE() {
+    return 'decline';
+  }
+
+  static fromJSON(json) {
+    const threeds = new ThreeDSecure();
+
+    const jsonKeys = Object.keys(json);
+    for (let i = jsonKeys.length; i >= 0; i -= 1) {
+      threeds[jsonKeys[i]] = json[jsonKeys[i]];
     }
 
-    static get CONTINUE_ON_FAILURE() {
-        return "continue";
-    }
-
-    static get DECLINE_ON_FAILURE() {
-        return "decline";
-    }
-
-    static fromJSON(json) {
-        let threeds = new ThreeDSecure();
-
-        for (let property in json) {
-            if (json.hasOwnProperty(property)) {
-                threeds[property] = json[property];
-            }
-        }
-
-        return threeds;
-    }
+    return threeds;
+  }
 };

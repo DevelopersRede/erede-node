@@ -1,44 +1,44 @@
-"use strict";
 
-const Address = require("./address");
-const Consumer = require("./consumer");
-const Iata = require("./iata");
+
+const Address = require('./address');
+const Consumer = require('./consumer');
+const Iata = require('./iata');
 
 module.exports = class Cart {
-    address(type = Address.BOTH) {
-        let address = Address();
+  address(type = Address.BOTH) {
+    const address = Address();
 
-        if ((type & Address.BILLING) === Address.BILLING) {
-            this.billing = address;
-        }
-
-        if ((type & Address.SHIPPING) === Address.SHIPPING) {
-            this.shipping = [address];
-        }
-
-        return address;
+    if ((type & Address.BILLING) === Address.BILLING) {
+      this.billing = address;
     }
 
-    addItem(item) {
-        if (this.items === undefined) {
-            this.items = [];
-        }
-
-        this.items.push(item);
-
-        return this;
+    if ((type & Address.SHIPPING) === Address.SHIPPING) {
+      this.shipping = [address];
     }
 
-    setConsumer(name, email, cpf) {
-        this.consumer = new Consumer(name, email, cpf);
+    return address;
+  }
 
-        return this.consumer;
+  addItem(item) {
+    if (this.items === undefined) {
+      this.items = [];
     }
 
-    setIata(code, departureTax, flight) {
-        this.iata = new Iata(code, departureTax);
-        this.iata.flight = flight;
+    this.items.push(item);
 
-        return this;
-    }
+    return this;
+  }
+
+  setConsumer(name, email, cpf) {
+    this.consumer = new Consumer(name, email, cpf);
+
+    return this.consumer;
+  }
+
+  setIata(code, departureTax, flight) {
+    this.iata = new Iata(code, departureTax);
+    this.iata.flight = flight;
+
+    return this;
+  }
 };

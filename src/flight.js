@@ -1,22 +1,20 @@
-"use strinct";
-
-const Passenger = require("./passenger");
+const Passenger = require('./passenger');
 
 module.exports = class Flight {
-    constructor(number, from, to, date) {
-        this.number = number;
-        this.from = from;
-        this.to = to;
-        this.date = date;
+  constructor(number, from, to, date) {
+    this.number = number;
+    this.from = from;
+    this.to = to;
+    this.date = date;
+  }
+
+  addPassenger(name, email, ticket) {
+    if (this.passenger === undefined) {
+      this.passenger = [];
     }
 
-    addPassenger(name, email, ticket) {
-        if (this.passenger === undefined) {
-            this.passenger = [];
-        }
+    this.passenger.push(new Passenger(name, email, ticket));
 
-        this.passenger.push(new Passenger(name, email, ticket));
-
-        return this;
-    }
+    return this;
+  }
 };
