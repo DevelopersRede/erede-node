@@ -9,6 +9,9 @@
     "erede",
     "sdk"
   ],
+  "scripts": {
+    "test": "NODE_ENV=test jest --config=jest.config.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/DevelopersRede/erede-node.git"
@@ -22,8 +25,8 @@
   },
   "main": "./lib/erede.js",
   "dependencies": {
-    "semver": "^5.0.3",
-    "bl": "^3.0.0"
+    "bl": "^3.0.0",
+    "semver": "^5.0.3"
   },
   "config": {
     "blanket": {
@@ -31,5 +34,9 @@
       "data-cover-never": "node_modules"
     }
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "jest": "^24.9.0"
+  }
 }
