@@ -4,21 +4,9 @@ require("dotenv").config({
 
 const eRede = require("../../lib/erede");
 const Transaction = require("../../lib/transaction");
-const Store = require("../../lib/store");
-const Environment = require("../../lib/environment");
+const store = require("../store");
 
 describe("Transactions", () => {
-  let environment =
-    process.env.NODE_ENV === "test"
-      ? Environment.sandbox()
-      : Environment.production();
-
-  let store = new Store(
-    process.env.REDE_TOKEN,
-    process.env.REDE_PV,
-    environment
-  );
-
   test("if user can create a transaction", async () => {
     let transaction = new Transaction(
       10,
