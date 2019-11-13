@@ -9,6 +9,9 @@
     "erede",
     "sdk"
   ],
+  "scripts": {
+    "test": "NODE_ENV=test jest --config=jest.config.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/DevelopersRede/erede-node.git"
@@ -22,8 +25,8 @@
   },
   "main": "./lib/erede.js",
   "dependencies": {
-    "semver": "^5.0.3",
-    "bl": "^3.0.0"
+    "bl": "^3.0.0",
+    "semver": "^5.0.3"
   },
   "config": {
     "blanket": {
@@ -31,5 +34,16 @@
       "data-cover-never": "node_modules"
     }
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2"
+  }
 }

@@ -8,6 +8,7 @@ let store = new Store(
   "PV",
   Environment.sandbox()
 );
+
 let transaction = new Transaction(10, `ref${parseInt(Date.now() / 1000)}`)
   .creditCard("5448280000000007", "235", "12", "2020", "Fulano de Tal")
   .autoCapture(false);
