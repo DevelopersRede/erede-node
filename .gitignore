@@ -4,4 +4,4 @@ package-lock.json
 yarn.lock
 .env.test
 
-__test__/coverage
+__tests__/coverage

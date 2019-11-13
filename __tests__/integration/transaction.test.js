@@ -44,7 +44,7 @@ describe('Transactions', () => {
 
     const antifraud = transaction.setAntifraud(environment);
     antifraud
-      .consumer('Fulano', 'fulano@mail.com', '11111111111')
+      .consumer('Fulano', 'fulano@mail.com', '09444956059')
       .setGender(Consumer.MALE)
       .setPhone('011', '999999999')
       .addDocument('RG', '111111111');
@@ -61,7 +61,8 @@ describe('Transactions', () => {
       .setType(Address.OTHER);
 
     const response = await new eRede(store).create(transaction);
-
-    console.log(response);
+    expect(response.returnCode).toBe('00');
+    expect(response.antifraud.success).toBe(true);
+    expect(response.returnMessage).toBe('Success.');
   });
 });
