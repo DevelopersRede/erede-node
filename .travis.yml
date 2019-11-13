@@ -2,6 +2,10 @@ language: node_js
 node_js:
   - 12
 
+env:
+  - REDE_PV=10004605
+  - REDE_TOKEN=a53ecd5be25c4069b2a21b004b9c4872
+
 cache:
   npm: false
   yarn: true
