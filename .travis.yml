@@ -15,5 +15,6 @@ before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
 
 script:
+  - echo ${REDE_PV} ${REDE_TOKEN}
   - yarn install
   - yarn test
