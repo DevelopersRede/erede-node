@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - 8
+  - 10
+  - 11
+  - 12
+
+env:
+  - REDE_PV=10004605 REDE_TOKEN=a53ecd5be25c4069b2a21b004b9c4872
+
+cache:
+  npm: false
+  yarn: true
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+script:
+  - yarn install
+  - yarn test

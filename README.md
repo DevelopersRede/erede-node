@@ -1,4 +1,5 @@
 # SDK Node.js
+[![Build Status](https://travis-ci.com/juliosouzam/erede-node.svg?branch=master)](https://travis-ci.com/juliosouzam/erede-node)
 
 SDK de integração eRede
 
