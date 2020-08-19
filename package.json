@@ -13,6 +13,10 @@
     "type": "git",
     "url": "https://github.com/DevelopersRede/erede-node.git"
   },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./",
+    "lint-fix": "./node_modules/.bin/eslint ./ --fix"
+  },
   "bugs": {
     "url": "https://github.com/DevelopersRede/erede-node/issues"
   },
@@ -22,8 +26,11 @@
   },
   "main": "./lib/erede.js",
   "dependencies": {
-    "semver": "^5.0.3",
-    "bl": "^3.0.0"
+    "bl": "^4.0.2",
+    "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0"
   },
   "config": {
     "blanket": {
