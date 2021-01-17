@@ -28,7 +28,8 @@ new eRede(store).create(transaction).then(transaction => {
 });
 ```
 
-Por padrão, a transação é capturada automaticamente; caso seja necessário apenas autorizar a transação, o método `Transaction.capture()` deverá ser chamado com o parâmetro `false`:
+Por padrão, a transação é capturada automaticamente; caso seja necessário apenas autorizar a transação, o
+método `Transaction.capture()` deverá ser chamado com o parâmetro `false`:
 
 ```js
 const eRede = require('./lib/erede');

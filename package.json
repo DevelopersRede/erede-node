@@ -2,7 +2,7 @@
   "author": "João Batista Neto",
   "name": "erede-node",
   "description": "SDK Node.JS Rede",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/DevelopersRede/erede-node",
   "keywords": [
     "rede",
@@ -18,12 +18,12 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">= v0.6.0"
+    "node": "^11.0.0"
   },
   "main": "./lib/erede.js",
   "dependencies": {
-    "semver": "^5.0.3",
-    "bl": "^3.0.0"
+    "semver": "^7.3.0",
+    "bl": "^4.0.0"
   },
   "config": {
     "blanket": {
